@@ -27,7 +27,7 @@ class MyCLI(cmd.Cmd):
             generativeAI = GenerativeAI()
             # re = str(line)
             command = generativeAI.generate_response(line)
-            print("\n"+ command +"\n")
+            print("\n n \n"+ command +"\n jn")
             process = subprocess.run(command, shell=True, capture_output=True, text=True)
 
             if process.returncode == 0:

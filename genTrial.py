@@ -4,7 +4,7 @@ import os
 import google.generativeai as genai
 
 # Used to securely store your API key
-# from google.colab import userdata
+
 from dotenv import dotenv_values
 from IPython.display import display
 from IPython.display import Markdown
