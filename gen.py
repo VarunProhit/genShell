@@ -1,4 +1,5 @@
 import textwrap
+import os
 from dotenv import dotenv_values
 from IPython.display import Markdown, display
 import google.generativeai as genai
@@ -9,6 +10,7 @@ class GenerativeAI:
     def __init__(self):
         env_vars = dotenv_values(".env")
         self.GOOGLE_API_KEY = env_vars.get('GOOGLE_API_KEY')
+        # self.GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
         self.model = genai.GenerativeModel('gemini-pro')
         genai.configure(api_key=self.GOOGLE_API_KEY)
 
